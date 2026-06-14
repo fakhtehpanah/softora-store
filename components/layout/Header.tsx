@@ -16,20 +16,42 @@ export default function Header() {
             </p>
           </div>
         </a>
+<nav className="hidden items-center gap-8 lg:flex">
+  <a
+    href="/"
+    className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
+  >
+    Home
+  </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {["Home", "Shop", "Collections", "New Arrivals", "Contact"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
-              >
-                {item}
-              </a>
-            ),
-          )}
-        </nav>
+  <a
+    href="/shop"
+    className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
+  >
+    Shop
+  </a>
+
+  <a
+    href="#"
+    className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
+  >
+    Collections
+  </a>
+
+  <a
+    href="#"
+    className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
+  >
+    New Arrivals
+  </a>
+
+  <a
+    href="#"
+    className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
+  >
+    Contact
+  </a>
+</nav>
 
         <div className="hidden items-center gap-3 md:flex">
           <button
@@ -38,13 +60,12 @@ export default function Header() {
           >
             Login
           </button>
-
-          <button
-            type="button"
-            className="rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-slate-800"
-          >
-            Cart
-          </button>
+<a
+  href="/cart"
+  className="rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-slate-800"
+>
+  Cart
+</a>
         </div>
 
         <button
