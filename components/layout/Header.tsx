@@ -66,6 +66,12 @@ export default function Header() {
 >
   Cart
 </a>
+<a
+  href="/dashboard"
+  className="rounded-full border border-slate-200 bg-white/70 px-5 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white"
+>
+  Dashboard
+</a>
         </div>
 
         <button
