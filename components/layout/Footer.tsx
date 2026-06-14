@@ -1,16 +1,37 @@
 const footerLinks = [
   {
     title: "Shop",
-    links: ["New Arrivals", "Best Sellers", "Collections", "Gift Cards"],
+    links: [
+      { label: "New Arrivals", href: "/shop" },
+      { label: "Best Sellers", href: "/shop" },
+      { label: "Collections", href: "/shop" },
+      { label: "Gift Cards", href: "/checkout" },
+    ],
   },
   {
     title: "Company",
-    links: ["About", "Contact", "Careers", "Journal"],
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Careers", href: "/about" },
+      { label: "Journal", href: "/about" },
+    ],
   },
   {
     title: "Support",
-    links: ["Help Center", "Shipping", "Returns", "Privacy Policy"],
+    links: [
+      { label: "Help Center", href: "/contact" },
+      { label: "Shipping", href: "/checkout" },
+      { label: "Returns", href: "/contact" },
+      { label: "Privacy Policy", href: "/about" },
+    ],
   },
+];
+
+const socialLinks = [
+  { label: "IG", href: "https://instagram.com" },
+  { label: "TW", href: "https://twitter.com" },
+  { label: "YT", href: "https://youtube.com" },
 ];
 
 export default function Footer() {
@@ -40,14 +61,16 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex gap-3">
-              {["IG", "TW", "YT"].map((item) => (
-                <button
-                  key={item}
-                  type="button"
+              {socialLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-xs font-black text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DDF7FF]"
                 >
-                  {item}
-                </button>
+                  {item.label}
+                </a>
               ))}
             </div>
           </div>
@@ -61,12 +84,12 @@ export default function Footer() {
 
                 <ul className="mt-5 space-y-3">
                   {group.links.map((link) => (
-                    <li key={link}>
+                    <li key={link.label}>
                       <a
-                        href="#"
+                        href={link.href}
                         className="text-sm font-semibold text-slate-500 transition hover:text-slate-950"
                       >
-                        {link}
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -78,7 +101,18 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col justify-between gap-4 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-500 md:flex-row">
           <p>© 2026 Softora. All rights reserved.</p>
-          <p>Designed for a clean storefront UI.</p>
+
+          <div className="flex flex-wrap gap-4">
+            <a href="/about" className="transition hover:text-slate-950">
+              Privacy
+            </a>
+            <a href="/contact" className="transition hover:text-slate-950">
+              Support
+            </a>
+            <a href="/shop" className="transition hover:text-slate-950">
+              Shop
+            </a>
+          </div>
         </div>
       </div>
     </footer>
