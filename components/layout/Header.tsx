@@ -31,6 +31,12 @@ export default function Header() {
     Shop
   </a>
   <a
+  href="/wishlist"
+  className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
+>
+  Wishlist
+</a>
+  <a
   href="/admin"
   className="text-sm font-semibold text-slate-600 transition hover:text-slate-950"
 >

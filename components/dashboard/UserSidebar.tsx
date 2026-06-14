@@ -1,10 +1,10 @@
 const menuItems = [
-  "Overview",
-  "Orders",
-  "Wishlist",
-  "Addresses",
-  "Payments",
-  "Settings",
+  { label: "Overview", href: "/dashboard" },
+  { label: "Orders", href: "/dashboard/orders" },
+  { label: "Wishlist", href: "/wishlist" },
+  { label: "Addresses", href: "#" },
+  { label: "Payments", href: "#" },
+  { label: "Settings", href: "#" },
 ];
 
 export default function UserSidebar() {
@@ -26,8 +26,8 @@ export default function UserSidebar() {
 
       <nav className="mt-5 space-y-2">
         {menuItems.map((item, index) => (
-          <button
-            key={item}
+          <a
+            key={item.label}
             type="button"
             className={`flex w-full items-center justify-between rounded-2xl px-5 py-4 text-sm font-black transition ${
               index === 0
@@ -35,9 +35,9 @@ export default function UserSidebar() {
                 : "bg-white/55 text-slate-600 hover:bg-white hover:text-slate-950"
             }`}
           >
-            <span>{item}</span>
+            <span>{item.label}</span>
             <span>→</span>
-          </button>
+          </a>
         ))}
       </nav>
 
