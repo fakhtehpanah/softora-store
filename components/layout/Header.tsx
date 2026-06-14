@@ -54,12 +54,12 @@ export default function Header() {
 </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <button
-            type="button"
-            className="rounded-full border border-slate-200 bg-white/70 px-5 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white"
-          >
-            Login
-          </button>
+          <a
+  href="/auth/login"
+  className="rounded-full border border-slate-200 bg-white/70 px-5 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white"
+>
+  Login
+</a>
 <a
   href="/cart"
   className="rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-slate-800"

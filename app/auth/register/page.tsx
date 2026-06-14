@@ -1,0 +1,151 @@
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+export default function RegisterPage() {
+  return (
+    <>
+      <Header />
+
+      <main className="flex min-h-screen items-center justify-center px-5 py-16">
+        <section className="grid w-full max-w-6xl overflow-hidden rounded-[2.8rem] border border-slate-200 bg-white/55 shadow-2xl shadow-slate-900/10 backdrop-blur-2xl lg:grid-cols-2">
+          <div className="p-6 md:p-10 lg:p-14">
+            <div className="mx-auto max-w-md">
+              <div className="mb-9 text-center">
+                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-950 text-2xl font-black text-white">
+                  S
+                </div>
+
+                <h2 className="text-4xl font-black tracking-tight text-slate-950">
+                  Create account
+                </h2>
+
+                <p className="mt-3 text-sm font-semibold text-slate-500">
+                  Join Softora and start shopping
+                </p>
+              </div>
+
+              <form className="space-y-5">
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label className="mb-2 block text-sm font-black text-slate-700">
+                      First Name
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Fakhteh"
+                      className="w-full rounded-2xl border border-slate-200 bg-white/75 px-5 py-4 text-sm font-bold text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="mb-2 block text-sm font-black text-slate-700">
+                      Last Name
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Panah"
+                      className="w-full rounded-2xl border border-slate-200 bg-white/75 px-5 py-4 text-sm font-bold text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm font-black text-slate-700">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    className="w-full rounded-2xl border border-slate-200 bg-white/75 px-5 py-4 text-sm font-bold text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm font-black text-slate-700">
+                    Password
+                  </label>
+
+                  <input
+                    type="password"
+                    placeholder="Create password"
+                    className="w-full rounded-2xl border border-slate-200 bg-white/75 px-5 py-4 text-sm font-bold text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm font-black text-slate-700">
+                    Confirm Password
+                  </label>
+
+                  <input
+                    type="password"
+                    placeholder="Repeat password"
+                    className="w-full rounded-2xl border border-slate-200 bg-white/75 px-5 py-4 text-sm font-bold text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:bg-white"
+                  />
+                </div>
+
+                <label className="flex items-start gap-3 rounded-2xl bg-white/60 p-4 text-sm font-semibold leading-6 text-slate-600">
+                  <input type="checkbox" className="mt-1 h-4 w-4 accent-slate-950" />
+                  <span>
+                    I agree to the terms, privacy policy and soft shopping
+                    experience.
+                  </span>
+                </label>
+
+                <button
+                  type="button"
+                  className="w-full rounded-full bg-slate-950 px-8 py-4 text-sm font-black text-white shadow-xl shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-800"
+                >
+                  Create Account
+                </button>
+              </form>
+
+              <p className="mt-8 text-center text-sm font-semibold text-slate-500">
+                Already have an account?{" "}
+                <a
+                  href="/auth/login"
+                  className="font-black text-slate-950 transition hover:text-sky-500"
+                >
+                  Sign in
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="relative hidden overflow-hidden bg-gradient-to-br from-[#FFF2C7] via-white to-[#DDF7FF] p-10 lg:block">
+            <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#BFEFFF]/80 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-[#E7F8EE]/80 blur-3xl" />
+
+            <div className="relative flex h-full min-h-[680px] flex-col justify-between">
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-500">
+                  New Account
+                </p>
+
+                <h1 className="mt-5 max-w-md text-5xl font-black leading-tight tracking-tight text-slate-950">
+                  Start your modern shopping journey.
+                </h1>
+
+                <p className="mt-5 max-w-sm text-sm leading-7 text-slate-600">
+                  A stylish register side panel with soft pastel colors and
+                  modern spacing.
+                </p>
+              </div>
+
+              <div className="store-glass-card store-float rounded-[2.3rem] p-6">
+                <div className="flex aspect-square items-center justify-center rounded-[1.8rem] bg-white/70 text-9xl">
+                  ✨
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+}
