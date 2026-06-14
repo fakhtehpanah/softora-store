@@ -55,10 +55,11 @@ export default function ProductCard({
             <p className="text-xs font-black uppercase tracking-[0.22em] text-sky-500">
               {category}
             </p>
-
-            <h3 className="mt-2 text-xl font-black tracking-tight text-slate-950">
-              {title}
-            </h3>
+                <a href="/product/1">
+  <h3 className="mt-2 text-xl font-black tracking-tight text-slate-950 transition hover:text-sky-500">
+    {title}
+  </h3>
+</a>
           </div>
 
           <div className="flex items-center gap-1 rounded-full bg-white/70 px-3 py-1.5 text-xs font-black text-slate-700 shadow-sm">
