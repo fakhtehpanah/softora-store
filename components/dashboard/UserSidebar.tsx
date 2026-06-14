@@ -1,12 +1,12 @@
 const menuItems = [
   { label: "Overview", href: "/dashboard" },
   { label: "Orders", href: "/dashboard/orders" },
+  { label: "Profile", href: "/dashboard/profile" },
   { label: "Wishlist", href: "/wishlist" },
   { label: "Addresses", href: "#" },
   { label: "Payments", href: "#" },
   { label: "Settings", href: "#" },
 ];
-
 export default function UserSidebar() {
   return (
     <aside className="store-glass-card h-fit rounded-[2.4rem] p-5 lg:sticky lg:top-28">
